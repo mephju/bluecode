@@ -1,0 +1,7 @@
+.tile {
+  display: inline-block;
+  margin: 25px;
+  background: #efefef;
+  padding: 25px;
+  text-align: left;
+}

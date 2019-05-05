@@ -1,19 +1,37 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from './App.module.css'
-import BarcodeWidget from './BarcodeWidget';
+import ColorConfigWidget from './ColorConfigWidget/ColorConfigWidget'
+import ThemeProvider from './ThemeProvider'
+import BarcodeEditor from './BarcodeWidget/BarcodeEditor';
+import toChecksum from './toChecksum';
+import BarcodeDisplay from './BarcodeWidget/BarcodeDisplay';
+
+
 
 function App() {
+
+  const [code, setCode] = useState('')
+
+  const checksum = toChecksum(code)
+
   return (
     <div className={styles.app}>
       <header className={styles.header}>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Barcode App for Bluecode
         </p>
       </header>
 
-      <section className={styles.content}>
-        <BarcodeWidget />
-      </section>
+        <ThemeProvider>
+          <section className={styles.content}>
+            <ColorConfigWidget />
+            <BarcodeEditor setCode={setCode} checksum={checksum} />
+            <div>
+
+              <BarcodeDisplay code={code} checksum={checksum} />
+            </div>
+          </section>
+        </ThemeProvider>
 
 
     </div>

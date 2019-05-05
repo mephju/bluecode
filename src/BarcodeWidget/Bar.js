@@ -7,16 +7,19 @@ const buildClassName = digit => {
   return `${styles.bar} ${styles[barClassName]}`
 }
 
-const Bar = ({digit}) => {
-  console.log('Bar', digit)
+const Bar = ({digit, color}) => {
+
   const className = buildClassName(digit)
+  const style = { backgroundColor: color }
+
   return (
-    <div className={className}>
+    <div className={className} style={style}>
     </div>
   )
 }
 
 Bar.propTypes = {
+  color: PropTypes.string.isRequired,
   digit: PropTypes.number.isRequired,
 }
 
