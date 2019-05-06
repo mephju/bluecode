@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import styles from './App.module.css'
-import ColorConfigWidget from './ColorConfigWidget/ColorConfigWidget'
+import ThemeEditor from './ThemeEditor/ThemeEditor'
 import ThemeProvider from './ThemeProvider'
-import BarcodeEditor from './BarcodeWidget/BarcodeEditor';
+import BarcodeEditor from './BarcodeEditor/BarcodeEditor'
 import toChecksum from './toChecksum';
-import BarcodeDisplay from './BarcodeWidget/BarcodeDisplay';
+import Barcode from './Barcode/Barcode'
 
 
 
@@ -24,11 +24,11 @@ function App() {
 
         <ThemeProvider>
           <section className={styles.content}>
-            <ColorConfigWidget />
+            <ThemeEditor />
             <BarcodeEditor setCode={setCode} checksum={checksum} />
             <div>
 
-              <BarcodeDisplay code={code} checksum={checksum} />
+              <Barcode code={code} checksum={checksum} />
             </div>
           </section>
         </ThemeProvider>

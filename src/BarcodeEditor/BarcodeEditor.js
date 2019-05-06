@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import CodeInput from './CodeInput'
-import Checksum from './Checksum';
-import Tile from '../Tile/Tile';
+import Checksum from './Checksum'
+import Tile from '../Tile/Tile'
 
 const BarcodeEditor = ({setCode, checksum}) => {
 

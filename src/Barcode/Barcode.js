@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './BarcodeDisplay.module.css'
+import styles from './Barcode.module.css'
 import PropTypes from 'prop-types'
 import Bar from './Bar'
 import Empty from '../Empty/Empty'
 import ThemeContext from '../ThemeContext'
-import ChecksumBar from './ChecksumBar';
+import ChecksumBar from './ChecksumBar'
 
 const BarcodeDisplay = (props) => {
 

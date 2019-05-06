@@ -1,5 +1,4 @@
 import React, {useCallback} from 'react'
-import styles from './CodeInput.module.css'
 import PropTypes from 'prop-types'
 import Input from '../Input/Input'
 
@@ -20,11 +19,12 @@ const CodeInput = (props) => {
   )
 
   return (
-    <div className={styles.codeInput}>
+    <div>
       <Input
         label='Number Input'
         type='number'
         onChange={onChange}
+        autoFocus 
       />
     </div>
   )

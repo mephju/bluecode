@@ -19,6 +19,12 @@ const Input = (props) => {
 Input.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.string,
+  onChange: PropTypes.func,
+  autoFocus: PropTypes.bool,
+  value: PropTypes.any,
+  onFocus: PropTypes.func,
+  name: PropTypes.string,
+  readOnly: PropTypes.bool,
 }
 
 

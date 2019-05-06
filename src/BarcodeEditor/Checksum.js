@@ -1,14 +1,11 @@
 import React from 'react'
-import styles from './Checksum.module.css'
 import PropTypes from 'prop-types'
 import Input from '../Input/Input'
-
-
 
 const Checksum = (props) => {
 
   return (
-    <div className={styles.checksum}>
+    <div> 
       <Input
         label='Checksum'
         type='text'

@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
-// import styles from './BarcodeWidget.module.css'
+import React from 'react'
 import PropTypes from 'prop-types'
-import Bar from './Bar';
+import Bar from './Bar'
 
 
 
